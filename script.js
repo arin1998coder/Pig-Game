@@ -100,8 +100,6 @@ const switchPlayer = () => {
 
 const startNewGame = () =>{
 
-    console.log("yo");
-
     currScore = 0;
 
     if(player0Sec.classList.contains('player--winner')){
@@ -111,6 +109,12 @@ const startNewGame = () =>{
         player1Sec.classList.remove('player--winner');
     }
 
+    //make player 0 acitve player
+    if(!player0Sec.classList.contains('player--acitve')){
+        player0Sec.classList.add('player--acitve');
+    }
+    player1Sec.classList.remove('player--acitve');
+
     //enable the disabled buttons
     rollDiceBtn.disabled = false;
     holdBtn.disabled = false;
@@ -119,6 +123,8 @@ const startNewGame = () =>{
 
     totalScorePlayer0.textContent=0;
     totalScorePlayer1.textContent=0;
+
+
 
 }
 
