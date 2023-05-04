@@ -110,10 +110,12 @@ const startNewGame = () =>{
     }
 
     //make player 0 acitve player
-    if(!player0Sec.classList.contains('player--acitve')){
-        player0Sec.classList.add('player--acitve');
+    console.log(player0Sec);
+    console.log(player1Sec);
+    if(!player0Sec.classList.contains('player--active')){
+        player0Sec.classList.add('player--active');
     }
-    player1Sec.classList.remove('player--acitve');
+    player1Sec.classList.remove('player--active');
 
     //enable the disabled buttons
     rollDiceBtn.disabled = false;
